@@ -967,7 +967,7 @@ if(isset($_POST["loader"])){
 
     //MUESTRA EL MENU DE OPCIONES 1
 
-} else if (!$_SESSION["pedirNombre"] && isset($_POST["msg"]) && $_POST["msg"] != "salir" && !isset($_SESSION["nombre"])) {
+} else if (!isset($_SESSION["pedirNombre"]) && isset($_POST["msg"]) && $_POST["msg"] != "salir" && !isset($_SESSION["nombre"])) {
     $chatbot = new AjaxChatbot();
     $chatbot->msg = $_POST["msg"];
     $chatbot->ajaxSaludar();
